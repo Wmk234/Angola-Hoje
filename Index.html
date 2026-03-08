@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Angola Hoje – App Premium de Alertas</title>
+<meta name="description" content="Angola Hoje é o app web essencial de Angola com câmbio, combustível, notícias, vagas e alertas pagos. Receba PDFs detalhados e alertas automáticos. Informação confiável, prática e monetizável.">
+<meta name="keywords" content="Angola, câmbio, dólar, euro, combustível, notícias, empregos, alertas, PDF, app web, monetização">
+
+<link rel="stylesheet" href="style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="app-header">
+  <h1><i class="fas fa-globe"></i> Angola Hoje</h1>
+  <p>App web com alertas pagos e gratuitos em Angola</p>
+</header>
+
+<main>
+  <section class="card" id="cambio">
+    <h2><i class="fas fa-money-bill-wave"></i> Câmbio</h2>
+    <p id="dolar">Carregando...</p>
+    <p id="euro">Carregando...</p>
+  </section>
+
+  <section class="card" id="combustivel">
+    <h2><i class="fas fa-gas-pump"></i> Combustível</h2>
+    <p id="precoCombustivel">Carregando...</p>
+  </section>
+
+  <section class="card" id="empregos">
+    <h2><i class="fas fa-briefcase"></i> Vagas & Concursos</h2>
+    <ul id="listaVagas"></ul>
+  </section>
+
+  <section class="card" id="noticias">
+    <h2><i class="fas fa-newspaper"></i> Notícias</h2>
+    <ul id="listaNoticias"></ul>
+  </section>
+
+  <section class="card" id="alertas">
+    <h2><i class="fas fa-bell"></i> Alertas</h2>
+    <input type="email" id="emailUsuario" placeholder="Digite seu e-mail">
+    <select id="tipoAlerta">
+      <option value="gratis">Grátis</option>
+      <option value="premium">Premium (Pago)</option>
+    </select>
+    <button id="btnAlertas"><i class="fas fa-envelope"></i> Receber Alertas</button>
+    <p id="statusAlerta"></p>
+  </section>
+
+  <section class="card" id="pdf">
+    <h2><i class="fas fa-file-pdf"></i> PDF Premium</h2>
+    <button id="btnPDF">Gerar PDF Premium</button>
+  </section>
+
+  <section class="card monetizacao">
+    <h2>Publicidade</h2>
+    <p>Espaço para banners de monetização ou parceiros locais</p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 Angola Hoje – Todos os direitos reservados</p>
+</footer>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+  </html>
